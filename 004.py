@@ -1,0 +1,5 @@
+n = input("Digite algo: ")
+print("O tipo primitivo é",type(n))
+print("Só tem espaço?",n.isnumeric())
+print("Só tem numeros?",n.isalnum())
+print("É numerico?",n.isalpha())
