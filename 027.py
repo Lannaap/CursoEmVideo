@@ -1,5 +1,3 @@
-f = str(input("Digite uma frase: ")).strip().upper()
-l = str(input("Qual letra voce quer saber sobre?: ")).upper()
-print(f"A letra {l} apareceu {f.count(l)} vezes,")
-print(f"A letra {l} apareceu a primeira vez na posição {f.find(l)+1}")
-print(f"A letra {l} apareceu pela ultima vez na posição {f.rfind(l)}")
+n = str(input('Digite seu nome: ')).strip().split()
+print(f"Seu primeiro nome é: {n[0].upper()}")
+print(f"Seu segundo nome é: {n[len(n)-1].upper()}")
