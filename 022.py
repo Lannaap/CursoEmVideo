@@ -1,4 +1,4 @@
-texto = input("Digite um nome: ")
+texto = input("Digite um nome: ").strip()
 print(f" Com letras maiusculas é: {texto.upper()}")
 print(f"Com letras minusculas: {texto.lower()} ")
 print(f"Tem {len(texto)} letras")
