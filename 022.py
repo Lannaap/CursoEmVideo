@@ -1,0 +1,5 @@
+texto = input("Digite um nome: ")
+print(f" Com letras maiusculas é: {texto.upper()}")
+print(f"Com letras minusculas: {texto.lower()} ")
+print(f"Tem {len(texto)} letras")
+print(f"O primeiro nome tem {len(texto.split()[0])} letras")
