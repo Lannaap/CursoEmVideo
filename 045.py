@@ -1,33 +1,53 @@
-import random
+from random import randint
+from time import sleep
 
-# 1 = pedra
-# 2 = papel
-# 3 = tesoura
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
 
-r = random.randint(1, 3)
+print("""Suas opções:
+[0] PEDRA
+[1] PAPEL
+[2] TESOURA""")
 
-eu = input("Escolha entre pedra, papel ou tesoura: ").lower()
+jogador = int(input("Qual é a sua jogada? "))
 
-if eu == "pedra":
-    eu_n = 1
-elif eu == "papel":
-    eu_n = 2
-elif eu == "tesoura":
-    eu_n = 3
-else:
-    print("Opção inválida!")
-    exit()
+print("JO")
+sleep(0.5)
+print("KEN")
+sleep(0.5)
+print("PO!!!")
 
-print(f"Você escolheu {eu}")
-print(f"O computador escolheu {r}")
+print("-=" * 11)
+print(f"Computador jogou {itens[computador]}")
+print(f"Jogador jogou {itens[jogador]}")
+print("-=" * 11)
 
+if computador == 0:  # computador jogou PEDRA
+    if jogador == 0:
+        print("EMPATE")
+    elif jogador == 1:
+        print("JOGADOR VENCE")
+    elif jogador == 2:
+        print("COMPUTADOR VENCE")
+    else:
+        print("Jogada inválida!")
 
-if eu_n == r:
-    print("Empate!")
+elif computador == 1:  # computador jogou PAPEL
+    if jogador == 0:
+        print("COMPUTADOR VENCE")
+    elif jogador == 1:
+        print("EMPATE")
+    elif jogador == 2:
+        print("JOGADOR VENCE")
+    else:
+        print("Jogada inválida!")
 
-
-elif (eu_n == 1 and r == 3) or (eu_n == 2 and r == 1) or (eu_n == 3 and r == 2):
-    print("Você venceu!")
-
-else:
-    print("Você perdeu!")
+elif computador == 2:  # computador jogou TESOURA
+    if jogador == 0:
+        print("JOGADOR VENCE")
+    elif jogador == 1:
+        print("COMPUTADOR VENCE")
+    elif jogador == 2:
+        print("EMPATE")
+    else:
+        print("Jogada inválida!")
