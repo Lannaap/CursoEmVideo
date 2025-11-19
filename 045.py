@@ -12,9 +12,9 @@ print("""Suas opções:
 jogador = int(input("Qual é a sua jogada? "))
 
 print("JO")
-sleep(0.5)
+sleep(1)
 print("KEN")
-sleep(0.5)
+sleep(1)
 print("PO!!!")
 
 print("-=" * 11)
